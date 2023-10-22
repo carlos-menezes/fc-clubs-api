@@ -1,5 +1,5 @@
 import { type InferType } from "yup";
-import { OverallStats, type Club } from "./models";
+import type { OverallStats, Club, MemberStats } from "./models";
 import { ROUTES } from "./routes";
 import { SCHEMAS } from "./schemas";
 
@@ -40,19 +40,15 @@ class EAFCApiService {
 
   searchClubByName = async (
     input: InferType<typeof SCHEMAS.CLUB_SEARCH>
-  ): Promise<Club[]> =>
-    this.get<InferType<typeof SCHEMAS.CLUB_SEARCH>, Club[]>(
-      "CLUB_SEARCH",
-      input
-    );
+  ): Promise<Club[]> => this.get("CLUB_SEARCH", input);
 
   overallStats = async (
     input: InferType<typeof SCHEMAS.OVERALL_STATS>
-  ): Promise<OverallStats[]> =>
-    this.get<InferType<typeof SCHEMAS.OVERALL_STATS>, OverallStats[]>(
-      "OVERALL_STATS",
-      input
-    );
+  ): Promise<OverallStats[]> => this.get("OVERALL_STATS", input);
+
+  memberStats = async (
+    input: InferType<typeof SCHEMAS.MEMBER_STATS>
+  ): Promise<MemberStats[]> => this.get("MEMBER_STATS", input);
 }
 
 export default EAFCApiService;

@@ -10,6 +10,10 @@ const SCHEMAS = {
     clubIds: string().required(),
     platform: string().required().oneOf(PLATFORMS),
   }),
+  MEMBER_STATS: object({
+    clubId: string().required(),
+    platform: string().required().oneOf(PLATFORMS),
+  }),
 } as const;
 
 export { SCHEMAS };

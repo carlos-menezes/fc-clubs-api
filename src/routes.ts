@@ -1,7 +1,7 @@
 import { type AnyObjectSchema } from 'yup'
 import { SCHEMAS } from './schemas'
 
-type ROUTE_NAME = "CLUB_SEARCH" | "OVERALL_STATS";
+type ROUTE_NAME = "CLUB_SEARCH" | "OVERALL_STATS" | "MEMBER_STATS";
 interface ROUTE {
   url: string
   schema: AnyObjectSchema
@@ -15,6 +15,10 @@ export const ROUTES: Record<ROUTE_NAME, ROUTE> = {
   OVERALL_STATS: {
     url: "clubs/overallStats",
     schema: SCHEMAS.OVERALL_STATS,
+  },
+  MEMBER_STATS: {
+    url: "members/career/stats",
+    schema: SCHEMAS.MEMBER_STATS,
   },
 };
 

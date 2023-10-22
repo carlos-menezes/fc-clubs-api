@@ -96,3 +96,23 @@ export interface OverallStats {
   reputationtier: string;
   leagueAppearances: string;
 }
+
+export interface MemberStats {
+  members: Array<{
+    name: string;
+    proPos: string;
+    gamesPlayed: string;
+    goals: string;
+    assists: string;
+    manOfTheMatch: string;
+    ratingAve: string;
+    prevGoals: string;
+    favoritePosition: string;
+  }>;
+  positionCount: {
+    midfielder: number;
+    goalkeeper: number;
+    forward: number;
+    defender: number;
+  };
+}
