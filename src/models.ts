@@ -50,3 +50,49 @@ export interface CustomKit {
   crestColor: string
   crestAssetId: string
 }
+
+export interface OverallStats {
+  clubId: string;
+  bestDivision: any;
+  bestFinishGroup: any;
+  finishesInDivision1Group1: string;
+  finishesInDivision2Group1: string;
+  finishesInDivision3Group1: string;
+  finishesInDivision4Group1: string;
+  finishesInDivision5Group1: string;
+  finishesInDivision6Group1: string;
+  gamesPlayed: string;
+  gamesPlayedPlayoff: string;
+  goals: string;
+  goalsAgainst: string;
+  promotions: string;
+  relegations: string;
+  losses: string;
+  ties: string;
+  wins: string;
+  lastMatch0: string;
+  lastMatch1: string;
+  lastMatch2: string;
+  lastMatch3: string;
+  lastMatch4: string;
+  lastMatch5: string;
+  lastMatch6: string;
+  lastMatch7: string;
+  lastMatch8: string;
+  lastMatch9: string;
+  lastOpponent0: string;
+  lastOpponent1: string;
+  lastOpponent2: string;
+  lastOpponent3: string;
+  lastOpponent4: string;
+  lastOpponent5: string;
+  lastOpponent6: string;
+  lastOpponent7: string;
+  lastOpponent8: string;
+  lastOpponent9: string;
+  wstreak: string;
+  unbeatenstreak: string;
+  skillRating: string;
+  reputationtier: string;
+  leagueAppearances: string;
+}
