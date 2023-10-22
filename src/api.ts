@@ -63,7 +63,7 @@ class EAFCApiService {
    */
   memberStats = async (
     input: InferType<typeof SCHEMAS.MEMBER_STATS>
-  ): Promise<MemberStats[]> => this.get("MEMBER_STATS", input);
+  ): Promise<MemberStats> => this.get("MEMBER_STATS", input);
 }
 
 export default EAFCApiService;
