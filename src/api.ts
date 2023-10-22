@@ -38,14 +38,29 @@ class EAFCApiService {
     return json;
   };
 
+  /**
+   * Search for a club by name
+   * @param input
+   * @returns
+   */
   searchClubByName = async (
     input: InferType<typeof SCHEMAS.CLUB_SEARCH>
   ): Promise<Club[]> => this.get("CLUB_SEARCH", input);
 
+  /**
+   * Get the overall stats of the club
+   * @param input
+   * @returns
+   */
   overallStats = async (
     input: InferType<typeof SCHEMAS.OVERALL_STATS>
   ): Promise<OverallStats[]> => this.get("OVERALL_STATS", input);
 
+  /**
+   * Get the stats of all members of the club
+   * @param input
+   * @returns
+   */
   memberStats = async (
     input: InferType<typeof SCHEMAS.MEMBER_STATS>
   ): Promise<MemberStats[]> => this.get("MEMBER_STATS", input);
