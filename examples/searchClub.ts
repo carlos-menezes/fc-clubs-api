@@ -2,7 +2,7 @@ import EAFCApiService from "../src/api";
 
 const apiService = new EAFCApiService()
 const search = async () =>
-  apiService.searchClubByName({
+  apiService.searchClub({
     clubName: "PILOKA FC",
     platform: "common-gen5",
   });

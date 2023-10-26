@@ -9,7 +9,6 @@ describe("EAFCApiService", () => {
         clubId: "2605511",
         platform: "common-gen5",
       });
-      // TODO: validate schema
       expect(result).toHaveProperty("members");
       expect(result).toHaveProperty("positionCount");
     });

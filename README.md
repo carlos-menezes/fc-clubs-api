@@ -43,14 +43,14 @@ Get the stats of all members of the club.
 
 An array of `MemberStats` objects that represent the stats of all members of the club.
 
-### `leagueMatchesStats(input: InferType<typeof SCHEMAS.LEAGUE_MATCHES_STATS>): Promise<LeagueMatch[]>`
+### `matchesStats(input: InferType<typeof SCHEMAS.MATCHES_STATS>): Promise<Match[]>`
 
-Get the stats of all league matches of the club
+Get the stats of all matches of the club
 
 #### Parameters
 
-- `input`: An object containing the search parameters. The object must conform to the `SCHEMAS.LEAGUE_MATCHES_STATS` schema.
+- `input`: An object containing the search parameters. The object must conform to the `SCHEMAS.MATCHES_STATS` schema.
 
 #### Returns
 
-An array of `LeagueMatch` objects that represent the stats of all league matches of the club.
+An array of `Match` objects that represent the stats of all matches of the club.

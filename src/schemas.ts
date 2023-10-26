@@ -1,8 +1,8 @@
 import { object, string } from "yup";
 import { PLATFORMS } from "./platform";
 
-export type TMatchType = "leagueMatch";
-const MATCH_TYPES: TMatchType[] = ["leagueMatch"];
+export type TMatchType = "leagueMatch" | "playoffMatch";
+const MATCH_TYPES: TMatchType[] = ["leagueMatch", "playoffMatch"];
 
 const SCHEMAS = {
   CLUB_SEARCH: object({
@@ -17,7 +17,7 @@ const SCHEMAS = {
     clubId: string().required(),
     platform: string().required().oneOf(PLATFORMS),
   }),
-  LEAGUE_MATCHES_STATS: object({
+  MATCHES_STATS: object({
     clubIds: string().required(),
     platform: string().required().oneOf(PLATFORMS),
     matchType: string().required().oneOf(MATCH_TYPES),

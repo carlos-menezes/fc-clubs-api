@@ -11,7 +11,6 @@ describe("EAFCApiService", () => {
       });
       expect(Array.isArray(result)).toBe(true);
       expect(result.length).toBeGreaterThan(0);
-      // TODO: validate schema
     });
 
     it("should throw an error if the input is invalid", async () => {

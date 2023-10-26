@@ -5,7 +5,7 @@ type TRouteName =
   | "CLUB_SEARCH"
   | "OVERALL_STATS"
   | "MEMBER_STATS"
-  | "LEAGUE_MATCHES_STATS";
+  | "MATCHES_STATS";
 
 interface ROUTE {
   url: string;
@@ -25,9 +25,9 @@ const ROUTES: Record<TRouteName, ROUTE> = {
     url: "members/career/stats",
     schema: SCHEMAS.MEMBER_STATS,
   },
-  LEAGUE_MATCHES_STATS: {
+  MATCHES_STATS: {
     url: "clubs/matches",
-    schema: SCHEMAS.LEAGUE_MATCHES_STATS,
+    schema: SCHEMAS.MATCHES_STATS,
   },
 };
 

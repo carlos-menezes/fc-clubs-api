@@ -114,7 +114,7 @@ export interface MemberStats {
   };
 }
 
-export interface LeagueMatch {
+export interface Match {
   matchId: string;
   timestamp: number;
   timeAgo: {
