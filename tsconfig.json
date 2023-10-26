@@ -1,4 +1,6 @@
 {
+  "include": ["src"],
+  "exclude": ["node_modules", "tests"],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
@@ -49,7 +51,7 @@
     // "maxNodeModuleJsDepth": 1,                        /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */
 
     /* Emit */
-    // "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
     // "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
     // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
     // "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
@@ -83,7 +85,7 @@
 
     /* Type Checking */
     "strict": true /* Enable all strict type-checking options. */,
-    // "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+    "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied 'any' type. */,
     // "strictNullChecks": true,                         /* When type checking, take into account 'null' and 'undefined'. */
     // "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
     // "strictBindCallApply": true,                      /* Check that the arguments for 'bind', 'call', and 'apply' methods match the original function. */
