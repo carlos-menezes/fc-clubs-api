@@ -1,6 +1,6 @@
 # eafc-clubs-api
 
-An API written in TypeScript for the EAFC24 Clubs mode which allows developers to retrieve game statistics for all platforms.
+An API written in TypeScript for the FC24 Clubs mode which allows developers to retrieve game statistics for all platforms.
 
 ## Example
 Check `examples/` for common use cases of this library.
