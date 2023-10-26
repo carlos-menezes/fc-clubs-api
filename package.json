@@ -2,8 +2,8 @@
   "name": "fc-clubs-api",
   "version": "2.0.0",
   "description": "",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/api.js",
+  "types": "lib/api.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
@@ -37,7 +37,6 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "fc-clubs-api": "^1.0.2",
     "yup": "^1.3.2"
   },
   "files": [
