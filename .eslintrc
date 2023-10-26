@@ -10,5 +10,13 @@
   "env": {
     "browser": true,
     "es2021": true
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.spec.js", "**/*.spec.jsx"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }

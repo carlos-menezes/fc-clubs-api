@@ -49,8 +49,8 @@ export interface Club {
 
 export interface OverallStats {
   clubId: string
-  bestDivision: any
-  bestFinishGroup: any
+  bestDivision: string
+  bestFinishGroup: string
   finishesInDivision1Group1: string
   finishesInDivision2Group1: string
   finishesInDivision3Group1: string
