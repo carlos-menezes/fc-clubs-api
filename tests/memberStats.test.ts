@@ -1,7 +1,7 @@
 import EAFCApiService from '../src/api'
 
 describe('EAFCApiService', () => {
-  let apiService = new EAFCApiService()
+  const apiService = new EAFCApiService()
 
   describe('overallStats', () => {
     it('should return an array of overall stats', async () => {
