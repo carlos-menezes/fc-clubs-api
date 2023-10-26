@@ -1,6 +1,6 @@
 {
   "name": "eafc-proclubs-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,11 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "keywords": ["eafc", "proclubs", "api"],
+  "keywords": [
+    "eafc",
+    "proclubs",
+    "api"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
