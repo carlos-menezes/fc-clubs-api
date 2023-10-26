@@ -1,8 +1,8 @@
-import { object, string } from "yup";
-import { PLATFORMS } from "./platform";
+import { object, string } from 'yup'
+import { PLATFORMS } from './platform'
 
-export type TMatchType = "leagueMatch" | "playoffMatch";
-const MATCH_TYPES: TMatchType[] = ["leagueMatch", "playoffMatch"];
+export type TMatchType = 'leagueMatch' | 'playoffMatch'
+const MATCH_TYPES: TMatchType[] = ['leagueMatch', 'playoffMatch']
 
 const SCHEMAS = {
   CLUB_SEARCH: object({
@@ -22,6 +22,6 @@ const SCHEMAS = {
     platform: string().required().oneOf(PLATFORMS),
     matchType: string().required().oneOf(MATCH_TYPES),
   }),
-} as const;
+} as const
 
-export { SCHEMAS };
+export { SCHEMAS }
