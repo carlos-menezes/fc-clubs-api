@@ -113,3 +113,124 @@ export interface MemberStats {
     defender: number;
   };
 }
+
+export interface LeagueMatch {
+  matchId: string;
+  timestamp: number;
+  timeAgo: {
+    number: number;
+    unit: string;
+  };
+  clubs: Record<
+    string,
+    {
+      date: string;
+      gameNumber: string;
+      goals: string;
+      goalsAgainst: string;
+      losses: string;
+      matchType: string;
+      result: string;
+      score: string;
+      season_id: string;
+      TEAM: string;
+      ties: string;
+      winnerByDnf: string;
+      wins: string;
+      details: {
+        name: string;
+        clubId: number;
+        regionId: number;
+        teamId: number;
+        customKit: {
+          stadName: string;
+          kitId: string;
+          seasonalTeamId: string;
+          seasonalKitId: string;
+          selectedKitType: string;
+          customKitId: string;
+          customAwayKitId: string;
+          customThirdKitId: string;
+          customKeeperKitId: string;
+          kitColor1: string;
+          kitColor2: string;
+          kitColor3: string;
+          kitColor4: string;
+          kitAColor1: string;
+          kitAColor2: string;
+          kitAColor3: string;
+          kitAColor4: string;
+          kitThrdColor1: string;
+          kitThrdColor2: string;
+          kitThrdColor3: string;
+          kitThrdColor4: string;
+          dCustomKit: string;
+          crestColor: string;
+          crestAssetId: string;
+        };
+      };
+    }
+  >;
+  players: Record<
+    string,
+    Record<
+      string,
+      {
+        assists: string;
+        cleansheetsany: string;
+        cleansheetsdef: string;
+        cleansheetsgk: string;
+        goals: string;
+        goalsconceded: string;
+        losses: string;
+        mom: string;
+        namespace: string;
+        passattempts: string;
+        passesmade: string;
+        pos: string;
+        rating: string;
+        realtimegame: string;
+        realtimeidle: string;
+        redcards: string;
+        saves: string;
+        SCORE: string;
+        shots: string;
+        tackleattempts: string;
+        tacklesmade: string;
+        vproattr: string;
+        vprohackreason: string;
+        wins: string;
+        playername: string;
+      }
+    >
+  >;
+  aggregate: Record<
+    string,
+    {
+      assists: number;
+      cleansheetsany: number;
+      cleansheetsdef: number;
+      cleansheetsgk: number;
+      goals: number;
+      goalsconceded: number;
+      losses: number;
+      mom: number;
+      namespace: number;
+      passattempts: number;
+      passesmade: number;
+      pos: number;
+      rating: number;
+      realtimegame: number;
+      realtimeidle: number;
+      redcards: number;
+      saves: number;
+      SCORE: number;
+      shots: number;
+      tackleattempts: number;
+      tacklesmade: number;
+      vproattr: number;
+      vprohackreason: number;
+      wins: number;
+    }
+  >;
+}

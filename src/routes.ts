@@ -1,13 +1,18 @@
 import { type AnyObjectSchema } from 'yup'
 import { SCHEMAS } from './schemas'
 
-type ROUTE_NAME = "CLUB_SEARCH" | "OVERALL_STATS" | "MEMBER_STATS";
+type TRouteName =
+  | "CLUB_SEARCH"
+  | "OVERALL_STATS"
+  | "MEMBER_STATS"
+  | "LEAGUE_MATCHES_STATS";
+
 interface ROUTE {
-  url: string
-  schema: AnyObjectSchema
+  url: string;
+  schema: AnyObjectSchema;
 }
 
-export const ROUTES: Record<ROUTE_NAME, ROUTE> = {
+const ROUTES: Record<TRouteName, ROUTE> = {
   CLUB_SEARCH: {
     url: "allTimeLeaderboard/search",
     schema: SCHEMAS.CLUB_SEARCH,
@@ -20,6 +25,11 @@ export const ROUTES: Record<ROUTE_NAME, ROUTE> = {
     url: "members/career/stats",
     schema: SCHEMAS.MEMBER_STATS,
   },
+  LEAGUE_MATCHES_STATS: {
+    url: "clubs/matches",
+    schema: SCHEMAS.LEAGUE_MATCHES_STATS,
+  },
 };
 
-export type { ROUTE_NAME }
+export type { TRouteName };
+export { ROUTES };

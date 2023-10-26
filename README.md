@@ -7,7 +7,7 @@ Check `examples/` for common use cases of this library.
 
 ## Endpoints
 
-### `searchClubByName(input: InferType<typeof SCHEMAS.CLUB_SEARCH>): Promise<Club[]>`
+### `searchClub(input: InferType<typeof SCHEMAS.CLUB_SEARCH>): Promise<Club[]>`
 
 Search for a club by name.
 
@@ -42,3 +42,15 @@ Get the stats of all members of the club.
 #### Returns
 
 An array of `MemberStats` objects that represent the stats of all members of the club.
+
+### `leagueMatchesStats(input: InferType<typeof SCHEMAS.LEAGUE_MATCHES_STATS>): Promise<LeagueMatch[]>`
+
+Get the stats of all league matches of the club
+
+#### Parameters
+
+- `input`: An object containing the search parameters. The object must conform to the `SCHEMAS.LEAGUE_MATCHES_STATS` schema.
+
+#### Returns
+
+An array of `LeagueMatch` objects that represent the stats of all league matches of the club.

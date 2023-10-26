@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc",
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts ."
   },
   "keywords": [],
   "author": "",

@@ -1,5 +1,5 @@
 import { type InferType } from "yup";
-import type { OverallStats, Club, MemberStats } from "./models";
+import type { OverallStats, Club, MemberStats, LeagueMatch } from "./models";
 import { ROUTES } from "./routes";
 import { SCHEMAS } from "./schemas";
 
@@ -43,7 +43,7 @@ class EAFCApiService {
    * @param input
    * @returns
    */
-  searchClubByName = async (
+  searchClub = async (
     input: InferType<typeof SCHEMAS.CLUB_SEARCH>
   ): Promise<Club[]> => this.get("CLUB_SEARCH", input);
 
@@ -64,6 +64,15 @@ class EAFCApiService {
   memberStats = async (
     input: InferType<typeof SCHEMAS.MEMBER_STATS>
   ): Promise<MemberStats> => this.get("MEMBER_STATS", input);
+
+  /**
+   * Get the stats of all league matches of the club
+   * @param input
+   * @returns
+   */
+  leagueMatchesStats = async (
+    input: InferType<typeof SCHEMAS.LEAGUE_MATCHES_STATS>
+  ): Promise<LeagueMatch[]> => this.get("LEAGUE_MATCHES_STATS", input);
 }
 
 export default EAFCApiService;
