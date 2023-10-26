@@ -75,4 +75,4 @@ class EAFCApiService {
   ): Promise<Match[]> => this.get('MATCHES_STATS', input)
 }
 
-export default EAFCApiService
+export { EAFCApiService }

@@ -37,6 +37,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "fc-clubs-api": "^1.0.2",
     "yup": "^1.3.2"
   },
   "files": [

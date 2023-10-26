@@ -1,4 +1,4 @@
-import EAFCApiService from '../src/api'
+import { EAFCApiService } from '../src/api'
 
 describe('EAFCApiService', () => {
   const apiService = new EAFCApiService()
