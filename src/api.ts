@@ -1,7 +1,13 @@
-import { type InferType } from 'yup'
+import type { InferType } from 'yup'
 import type { OverallStats, Club, MemberStats, Match } from './models'
 import { ROUTES } from './routes'
 import { SCHEMAS } from './schemas'
+import type {
+  ClubSearchInput,
+  MatchesStatsInput,
+  MembersStatsInput,
+  OverallStatsInput,
+} from './schemas'
 
 class EAFCApiService {
   private readonly baseUrl = new URL('https://proclubs.ea.com/api/fc/')
@@ -77,3 +83,9 @@ class EAFCApiService {
 
 export { EAFCApiService }
 export type { Club, OverallStats, MemberStats, Match }
+export type {
+  ClubSearchInput,
+  OverallStatsInput,
+  MembersStatsInput,
+  MatchesStatsInput,
+}

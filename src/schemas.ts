@@ -1,4 +1,4 @@
-import { object, string } from 'yup'
+import { InferType, object, string } from 'yup'
 import { PLATFORMS } from './platform'
 
 export type TMatchType = 'leagueMatch' | 'playoffMatch'
@@ -24,4 +24,15 @@ const SCHEMAS = {
   }),
 } as const
 
+type ClubSearchInput = InferType<typeof SCHEMAS.CLUB_SEARCH>
+type OverallStatsInput = InferType<typeof SCHEMAS.OVERALL_STATS>
+type MembersStatsInput = InferType<typeof SCHEMAS.MEMBER_STATS>
+type MatchesStatsInput = InferType<typeof SCHEMAS.MATCHES_STATS>
+
 export { SCHEMAS }
+export type {
+  ClubSearchInput,
+  OverallStatsInput,
+  MembersStatsInput,
+  MatchesStatsInput,
+}
