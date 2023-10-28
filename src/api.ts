@@ -76,3 +76,4 @@ class EAFCApiService {
 }
 
 export { EAFCApiService }
+export type { Club, OverallStats, MemberStats, Match }
