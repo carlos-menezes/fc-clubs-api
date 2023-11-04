@@ -10,7 +10,18 @@ export interface Club {
   cleanSheets: string
   points: string
   reputationtier: string
-  clubInfo: {
+  clubInfo: ClubInfo
+  platform: string
+  clubName: string
+  currentDivision: string
+}
+
+/**
+ * Here, the key is the `clubId`
+ */
+export type ClubInfo = Record<
+  string,
+  {
     name: string
     clubId: number
     regionId: number
@@ -42,9 +53,39 @@ export interface Club {
       crestAssetId: string
     }
   }
-  platform: string
-  clubName: string
-  currentDivision: string
+>
+
+export interface _ClubInfo {
+  name: string
+  clubId: number
+  regionId: number
+  teamId: number
+  customKit: {
+    stadName: string
+    kitId: string
+    seasonalTeamId: string
+    seasonalKitId: string
+    selectedKitType: string
+    customKitId: string
+    customAwayKitId: string
+    customThirdKitId: string
+    customKeeperKitId: string
+    kitColor1: string
+    kitColor2: string
+    kitColor3: string
+    kitColor4: string
+    kitAColor1: string
+    kitAColor2: string
+    kitAColor3: string
+    kitAColor4: string
+    kitThrdColor1: string
+    kitThrdColor2: string
+    kitThrdColor3: string
+    kitThrdColor4: string
+    dCustomKit: string
+    crestColor: string
+    crestAssetId: string
+  }
 }
 
 export interface OverallStats {

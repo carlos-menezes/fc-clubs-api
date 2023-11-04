@@ -1,13 +1,14 @@
 import type { InferType } from 'yup'
-import type { OverallStats, Club, MemberStats, Match } from './models'
+import type { Club, ClubInfo, Match, MemberStats, OverallStats } from './models'
 import { ROUTES } from './routes'
-import { SCHEMAS } from './schemas'
 import type {
   ClubSearchInput,
   MatchesStatsInput,
   MembersStatsInput,
   OverallStatsInput,
+  ClubInfoInput,
 } from './schemas'
+import { SCHEMAS } from './schemas'
 
 class EAFCApiService {
   private readonly baseUrl = new URL('https://proclubs.ea.com/api/fc/')
@@ -79,13 +80,29 @@ class EAFCApiService {
   matchesStats = async (
     input: InferType<typeof SCHEMAS.MATCHES_STATS>,
   ): Promise<Match[]> => this.get('MATCHES_STATS', input)
+
+  /**
+   * Gets information of a club
+   * Note that you need to index the response by the `clubId`, e.g. check `examples/clubInfo`
+   *
+   * @param input
+   * @returns
+   */
+  clubInfo = async (
+    input: InferType<typeof SCHEMAS.CLUB_INFO>,
+  ): Promise<ClubInfo> => this.get('CLUB_INFO', input)
 }
 
 export { EAFCApiService }
-export type { Club, OverallStats, MemberStats, Match }
 export type {
+  Club,
   ClubSearchInput,
-  OverallStatsInput,
-  MembersStatsInput,
+  Match,
   MatchesStatsInput,
+  MemberStats,
+  MembersStatsInput,
+  OverallStats,
+  OverallStatsInput,
+  ClubInfo,
+  ClubInfoInput,
 }

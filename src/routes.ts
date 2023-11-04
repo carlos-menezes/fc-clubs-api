@@ -6,6 +6,7 @@ type TRouteName =
   | 'OVERALL_STATS'
   | 'MEMBER_STATS'
   | 'MATCHES_STATS'
+  | 'CLUB_INFO'
 
 interface ROUTE {
   url: string
@@ -28,6 +29,10 @@ const ROUTES: Record<TRouteName, ROUTE> = {
   MATCHES_STATS: {
     url: 'clubs/matches',
     schema: SCHEMAS.MATCHES_STATS,
+  },
+  CLUB_INFO: {
+    url: 'clubs/info',
+    schema: SCHEMAS.CLUB_INFO,
   },
 }
 

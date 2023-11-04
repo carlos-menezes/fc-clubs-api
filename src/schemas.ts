@@ -22,12 +22,17 @@ const SCHEMAS = {
     platform: string().required().oneOf(PLATFORMS),
     matchType: string().required().oneOf(MATCH_TYPES),
   }),
+  CLUB_INFO: object({
+    clubIds: string().required(),
+    platform: string().required().oneOf(PLATFORMS),
+  }),
 } as const
 
 type ClubSearchInput = InferType<typeof SCHEMAS.CLUB_SEARCH>
 type OverallStatsInput = InferType<typeof SCHEMAS.OVERALL_STATS>
 type MembersStatsInput = InferType<typeof SCHEMAS.MEMBER_STATS>
 type MatchesStatsInput = InferType<typeof SCHEMAS.MATCHES_STATS>
+type ClubInfoInput = InferType<typeof SCHEMAS.CLUB_INFO>
 
 export { SCHEMAS }
 export type {
@@ -35,4 +40,5 @@ export type {
   OverallStatsInput,
   MembersStatsInput,
   MatchesStatsInput,
+  ClubInfoInput,
 }
