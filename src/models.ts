@@ -10,7 +10,7 @@ export interface Club {
   cleanSheets: string
   points: string
   reputationtier: string
-  clubInfo: ClubInfo
+  clubInfo: ClubInfo[keyof ClubInfo]
   platform: string
   clubName: string
   currentDivision: string
