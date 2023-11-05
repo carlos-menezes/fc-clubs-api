@@ -13,6 +13,10 @@ const SCHEMAS = {
     clubIds: string().required(),
     platform: string().required().oneOf(PLATFORMS),
   }),
+  MEMBER_CAREER_STATS: object({
+    clubId: string().required(),
+    platform: string().required().oneOf(PLATFORMS),
+  }),
   MEMBER_STATS: object({
     clubId: string().required(),
     platform: string().required().oneOf(PLATFORMS),
@@ -30,7 +34,8 @@ const SCHEMAS = {
 
 type ClubSearchInput = InferType<typeof SCHEMAS.CLUB_SEARCH>
 type OverallStatsInput = InferType<typeof SCHEMAS.OVERALL_STATS>
-type MembersStatsInput = InferType<typeof SCHEMAS.MEMBER_STATS>
+type MemberCareerStatsInput = InferType<typeof SCHEMAS.MEMBER_CAREER_STATS>
+type MemberStatsInput = InferType<typeof SCHEMAS.MEMBER_STATS>
 type MatchesStatsInput = InferType<typeof SCHEMAS.MATCHES_STATS>
 type ClubInfoInput = InferType<typeof SCHEMAS.CLUB_INFO>
 
@@ -38,7 +43,8 @@ export { SCHEMAS }
 export type {
   ClubSearchInput,
   OverallStatsInput,
-  MembersStatsInput,
+  MemberCareerStatsInput,
+  MemberStatsInput,
   MatchesStatsInput,
   ClubInfoInput,
 }

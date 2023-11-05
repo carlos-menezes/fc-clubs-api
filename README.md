@@ -34,17 +34,17 @@ Get the overall stats of the club.
 
 An array of `OverallStats` objects that represent the overall stats of the club.
 
-### `memberStats(input: InferType<typeof SCHEMAS.MEMBER_STATS>): Promise<MemberStats[]>`
+### `memberCareerStats(input: InferType<typeof SCHEMAS.MEMBER_CAREER_STATS>): Promise<MemberCareerStats[]>`
 
 Get the stats of all members of the club.
 
 #### Parameters
 
-- `input`: An object containing the search parameters. The object must conform to the `SCHEMAS.MEMBER_STATS` schema.
+- `input`: An object containing the search parameters. The object must conform to the `SCHEMAS.MEMBER_CAREER_STATS` schema.
 
 #### Returns
 
-An array of `MemberStats` objects that represent the stats of all members of the club.
+An array of `MemberCareerStats` objects that represent the career stats of all members of the club.
 
 ### `matchesStats(input: InferType<typeof SCHEMAS.MATCHES_STATS>): Promise<Match[]>`
 
@@ -57,3 +57,15 @@ Get the stats of all matches of the club
 #### Returns
 
 An array of `Match` objects that represent the stats of all matches of the club.
+
+### `memberStats(input: InferType<typeof SCHEMAS.MEMBER__STATS>): Promise<MemberStats[]>`
+
+Get the stats of all members of the club.
+
+#### Parameters
+
+- `input`: An object containing the search parameters. The object must conform to the `SCHEMAS.MEMBER__STATS` schema.
+
+#### Returns
+
+An array of `MemberStats` objects that represent the  stats of all members of the club.

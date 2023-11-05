@@ -4,6 +4,7 @@ import { SCHEMAS } from './schemas'
 type TRouteName =
   | 'CLUB_SEARCH'
   | 'OVERALL_STATS'
+  | 'MEMBER_CAREER_STATS'
   | 'MEMBER_STATS'
   | 'MATCHES_STATS'
   | 'CLUB_INFO'
@@ -22,8 +23,12 @@ const ROUTES: Record<TRouteName, ROUTE> = {
     url: 'clubs/overallStats',
     schema: SCHEMAS.OVERALL_STATS,
   },
-  MEMBER_STATS: {
+  MEMBER_CAREER_STATS: {
     url: 'members/career/stats',
+    schema: SCHEMAS.MEMBER_CAREER_STATS,
+  },
+  MEMBER_STATS: {
+    url: 'members/stats',
     schema: SCHEMAS.MEMBER_STATS,
   },
   MATCHES_STATS: {
