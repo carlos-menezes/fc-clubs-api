@@ -50,9 +50,9 @@ class EAFCApiService {
       },
     })
 
-      const json = JSON.parse(await request.text())
-      await route.schema.validate(json, { strict: true })
-      return json
+    const json = JSON.parse(await request.text())
+    await route.schema.validate(json, { strict: true })
+    return json
   }
 
   /**
