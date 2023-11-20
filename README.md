@@ -1,4 +1,4 @@
-# fc-clubs-api
+# eafc-clubs-api
 
 An API written in TypeScript for the FC24 Clubs mode which allows developers to retrieve game statistics for all platforms.
 
