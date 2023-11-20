@@ -17,6 +17,7 @@ import type {
   MemberStatsInput,
 } from './schemas'
 import { SCHEMAS } from './schemas'
+import axios from 'axios'
 
 class EAFCApiService {
   private readonly baseUrl = new URL('https://proclubs.ea.com/api/fc/')
@@ -38,7 +39,7 @@ class EAFCApiService {
       url.searchParams.append(key, input[key])
     })
 
-    const request = await fetch(url.toString(), {
+    const response = await axios.get(url.toString(), {
       headers: {
         accept: 'application/json',
         'accept-language': 'en-GB,en;q=0.9',
@@ -49,7 +50,7 @@ class EAFCApiService {
           'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
       },
     })
-    const json: TModel = await request.json()
+    const json = response.data as unknown as TModel
     return json
   }
 
