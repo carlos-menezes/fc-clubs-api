@@ -9,15 +9,14 @@ import type {
 } from './models'
 import { ROUTES } from './routes'
 import type {
+  ClubInfoInput,
   ClubSearchInput,
   MatchesStatsInput,
   MemberCareerStatsInput,
-  OverallStatsInput,
-  ClubInfoInput,
   MemberStatsInput,
+  OverallStatsInput,
 } from './schemas'
 import { SCHEMAS } from './schemas'
-import axios from 'axios'
 
 class EAFCApiService {
   private readonly baseUrl = new URL('https://proclubs.ea.com/api/fc/')
@@ -39,7 +38,7 @@ class EAFCApiService {
       url.searchParams.append(key, input[key])
     })
 
-    const response = await axios.get(url.toString(), {
+    const response = await fetch(url.toString(), {
       headers: {
         accept: 'application/json',
         'accept-language': 'en-GB,en;q=0.9',
@@ -50,7 +49,7 @@ class EAFCApiService {
           'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
       },
     })
-    const json = response.data as unknown as TModel
+    const json: TModel = await response.json()
     return json
   }
 
@@ -114,6 +113,8 @@ class EAFCApiService {
 export { EAFCApiService }
 export type {
   Club,
+  ClubInfo,
+  ClubInfoInput,
   ClubSearchInput,
   Match,
   MatchesStatsInput,
@@ -123,6 +124,5 @@ export type {
   MemberStatsInput,
   OverallStats,
   OverallStatsInput,
-  ClubInfo,
-  ClubInfoInput,
 }
+
