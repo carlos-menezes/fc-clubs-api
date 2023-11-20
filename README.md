@@ -3,7 +3,7 @@
 An API written in TypeScript for the FC24 Clubs mode which allows developers to retrieve game statistics for all platforms.
 
 ## Installation
-`npm i fc-clubs-api`
+`npm i eafc-clubs-api`
 
 ## Example
 Check `examples/` for common use cases of this library.
