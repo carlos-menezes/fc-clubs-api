@@ -1,6 +1,6 @@
 {
   "name": "fc-clubs-api",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "",
   "main": "lib/api.js",
   "types": "lib/api.d.ts",
