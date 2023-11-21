@@ -110,7 +110,7 @@ class EAFCApiService {
   ): Promise<ClubInfo> => this.get('CLUB_INFO', input)
 }
 
-export { EAFCApiService }
+export { EAFCApiService, SCHEMAS }
 export type {
   Club,
   ClubInfo,
