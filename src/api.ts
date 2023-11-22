@@ -40,14 +40,13 @@ class EAFCApiService {
 
     const response = await fetch(url.toString(), {
       headers: {
-        accept: 'application/json',
-        'accept-language': 'en-GB,en;q=0.9',
-        'content-type': 'application/json',
-        origin: 'https://www.ea.com',
-        referer: 'https://www.ea.com/',
-        'user-agent':
-          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
+        'User-Agent':
+          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/112.0',
+        Accept:
+          'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+        'Accept-Encoding': 'gzip, deflate, br',
       },
+      method: 'GET',
     })
     const json: TModel = await response.json()
     return json
